@@ -1,14 +1,6 @@
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.types import InlineKeyboardButton
+from aiogram.types import InlineKeyboardMarkup
 
-choose_mode = InlineKeyboardMarkup(
-    inline_keyboard=[[
-        InlineKeyboardButton(text="перевести предложения по теме",
-                             callback_data="translate_practice")
-    ],[
-        InlineKeyboardButton(text="режим диалога с ИИ",
-                             callback_data="dialog_with_AI")
-    ],[
-        InlineKeyboardButton(text="проверка произношения",
-                             callback_data="check_speech")
-    ]]
+to_start_menu_btn = InlineKeyboardButton(
+    text="В главное меню", callback_data="start_menu"
 )

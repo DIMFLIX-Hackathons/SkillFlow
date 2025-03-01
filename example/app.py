@@ -1,24 +1,19 @@
-from aiogram import Bot, Dispatcher
-from config import settings
 import asyncio
-# from b/ot.logger import cl
-from handlers.commands import router as r_h
-from handlers.messages import router as r_m
-from handlers.call_backs import router as r_cb
+
+from aiogram import Bot
+from aiogram import Dispatcher
+from config import settings
+from handlers import main_router
+from uvloop import install as install_uvloop
+
 
 async def main() -> None:
-
     bot = Bot(settings.BOT_TOKEN.get_secret_value())
     dp = Dispatcher()
-    dp.include_routers(
-        r_h,
-        r_m,
-        r_cb
-    )
-    await bot.delete_webhook(True)
+    dp.include_routers(main_router)
     await dp.start_polling(bot)
 
 
 if __name__ == "__main__":
+    install_uvloop()
     asyncio.run(main())
-
