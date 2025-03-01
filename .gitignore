@@ -56,3 +56,6 @@ cover/
 
 # python version
 .python-version
+
+*.safetensors
+.env
