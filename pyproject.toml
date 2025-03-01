@@ -16,8 +16,10 @@ license = "GPL-3.0-or-later"
 license-files = ["LICEN[CS]E*"]
 dependencies = [
     "aiogram>=3.18.0",
+    "openai-whisper>=20240930",
     "pydantic>=2.10.6",
     "pydantic-settings>=2.8.1",
+    "speechbrain>=1.0.2",
     "transformers>=4.49.0",
     "uvloop>=0.21.0",
 ]
