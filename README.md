@@ -217,7 +217,6 @@ sequenceDiagram
    - Пакет аналитики для преподавателей
 
 3. **Full Launch** (12 месяцев):
-   - VR-интеграция
    - Enterprise-версия с white-label
    - Marketplace дополнительных модулей
 
