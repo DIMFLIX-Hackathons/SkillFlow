@@ -1,9 +1,6 @@
 from transformers import Wav2Vec2Model, Wav2Vec2Processor, Wav2Vec2ForCTC, pipeline
 import torch
 import torchaudio
-import numpy as np
-from fastdtw import fastdtw
-from scipy.spatial.distance import euclidean
 
 # Загрузка модели и процессора
 processor = Wav2Vec2Processor.from_pretrained("models/path_to_save_processor")

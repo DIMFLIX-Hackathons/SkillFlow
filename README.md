@@ -170,14 +170,14 @@ sequenceDiagram
 
 ## Инновационные бизнес-процессы
 
-1. **Dynamic Rubrics Adjustment**  
+1. **Dynamic Rubrics Adjustment**
    Система автоматически корректирует веса критериев оценки на основе:
 
    - Уровня группы
    - Статистики предыдущих заданий
    - Целей курса (например, акцент на бизнес-лексику)
 
-2. **Cross-modal Feedback Fusion**  
+2. **Cross-modal Feedback Fusion**
    Комбинированный анализ:
 
    ```python
@@ -188,7 +188,7 @@ sequenceDiagram
        return hybrid_feedback_model(speech_analysis, emotion_score, grammar_errors)
    ```
 
-3. **Automated Debate Simulator**  
+3. **Automated Debate Simulator**
    Генерация виртуальных оппонентов для:
    - Практики аргументации
    - Отработки специфической лексики

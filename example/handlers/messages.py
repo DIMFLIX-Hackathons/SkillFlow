@@ -1,6 +1,5 @@
-from aiogram import Router, F
+from aiogram import Router
 from aiogram.types import Message
-from aiogram.filters import Command
 import os
 from models.recognize import compare_pronunciation
 

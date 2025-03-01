@@ -1,7 +1,6 @@
-from aiogram import Router, F
+from aiogram import Router
 from aiogram.types import Message
 from aiogram.filters import Command
-from aiogram.fsm.context import FSMContext
 from keyboards.inline_keyboard import choose_mode
 
 router = Router()
