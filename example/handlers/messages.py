@@ -1,7 +1,6 @@
 import os
 
 from aiogram import Bot
-from aiogram import F
 from aiogram import Router
 from aiogram.types import Message
 from models.recognize import compare_pronunciation

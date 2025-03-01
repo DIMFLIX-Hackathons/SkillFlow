@@ -14,7 +14,7 @@ async def start_bot(bot: Bot, message: Message):
         inline_keyboard=[
             [
                 InlineKeyboardButton(
-                    text="Перевести предложения по теме",
+                    text="Перевести предложения",
                     callback_data="translate_practice",
                 )
             ],

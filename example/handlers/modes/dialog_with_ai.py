@@ -2,7 +2,6 @@ from aiogram import Bot
 from aiogram import F
 from aiogram import Router
 from aiogram.types import CallbackQuery
-from aiogram.types import InlineKeyboardButton
 from aiogram.types import InlineKeyboardMarkup
 from keyboards.inline_keyboard import to_start_menu_btn
 
