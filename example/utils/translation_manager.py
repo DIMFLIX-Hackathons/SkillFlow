@@ -12,7 +12,7 @@ from .ai_assistant import AIAssistant
 class TranslationPracticeManager:
     def __init__(self):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.whisper_model = whisper.load_model("medium").to(self.device)
+        self.whisper_model = whisper.load_model("base").to(self.device)
         self.ai_assistant = AIAssistant(
             system_prompt="You're an English teaching assistant. Generate translation tasks "
             "considering user's level. Be flexible with correct variations. Never repeat phrases."
