@@ -17,4 +17,5 @@ async def check_audio(message: Message):
     save_path = os.path.join("voices", f"{message.from_user.id}_1.ogg")
     await message.bot.download_file(file_path, save_path)
     distance = compare_pronunciation(save_path)
-    await message.answer(str(distance))
+    await message.answer(f"{distance} - Евклидово расстояние")
+    # await message.answer(f"{words} - слова")
