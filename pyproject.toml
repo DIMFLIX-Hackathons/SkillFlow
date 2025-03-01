@@ -4,12 +4,13 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.11"
 authors = [
-  {name = "<username>", email = "mail@example.com"},
+  {name = "dimflix", email = "dimflix.official@gmail.com"},
+  {name = "sweepyd1", email = "dima10yashin@gmail.com"},
+  {name = "vasilisqq", email = "ertybasevk@gmail.com"},
+  {name = "AsDo001", email = "arsdon2006@gmail.com"},
 ]
-maintainers = [
-  {name = "<username>", email = "mail@example.com"}
-]
-keywords = ["project-template", "python", "uv"]
+
+keywords = ["skills", "courses", "python", "uv"]
 readme = "README.md"
 license = "GPL-3.0-or-later"
 license-files = ["LICEN[CS]E*"]
@@ -21,14 +22,14 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/<username>/<repository-name>"
-Documentation = "https://github.com/<username>/<repository-name>/wiki"
-Repository = "https://github.com/<username>/<repository-name>.git"
-"Bug Tracker" = "https://github.com/<username>/<repository-name>/issues"
-Changelog = "https://github.com/<username>/<repository-name>/blob/master/CHANGELOG.md"
+Homepage = "https://github.com/DIMFLIX-OFFICIAL/SkillFlow"
+Documentation = "https://github.com/DIMFLIX-OFFICIAL/SkillFlow/wiki"
+Repository = "https://github.com/DIMFLIX-OFFICIAL/SkillFlow.git"
+"Bug Tracker" = "https://github.com/DIMFLIX-OFFICIAL/SkillFlow/issues"
+Changelog = "https://github.com/DIMFLIX-OFFICIAL/SkillFlow/blob/master/CHANGELOG.md"
 
 [tool.pytest.ini_options]
-pythonpath = "src"
+pythonpath = "example"
 
 [dependency-groups]
 dev = [
