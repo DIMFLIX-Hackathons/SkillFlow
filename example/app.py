@@ -9,7 +9,7 @@ from uvloop import install as install_uvloop
 
 async def main() -> None:
     bot = Bot(settings.BOT_TOKEN.get_secret_value())
-    dp = Dispatcher()
+    dp = Dispatcher(bot=bot)
     dp.include_routers(main_router)
     await dp.start_polling(bot)
 

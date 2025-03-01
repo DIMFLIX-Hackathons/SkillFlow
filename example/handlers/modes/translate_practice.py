@@ -9,12 +9,12 @@ on = Router()
 
 
 @on.callback_query(F.data == "translate_practice")
-async def translate_practice(bot: Bot, callback: CallbackQuery) -> None:
+async def translate_practice(callback: CallbackQuery, bot: Bot) -> None:
     kb = InlineKeyboardMarkup(inline_keyboard=[[to_start_menu_btn]])
 
     await bot.edit_message_text(
         chat_id=callback.from_user.id,
         message_id=callback.message.message_id,
         text="Хендлер еще не написан...",
-        reply_markup=kb.as_markup(),
+        reply_markup=kb,
     )

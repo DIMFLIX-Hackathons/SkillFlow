@@ -1,6 +1,8 @@
 from aiogram import Bot
+from aiogram import F
 from aiogram import Router
 from aiogram.filters import Command
+from aiogram.types import CallbackQuery
 from aiogram.types import InlineKeyboardButton
 from aiogram.types import InlineKeyboardMarkup
 from aiogram.types import Message
@@ -9,8 +11,9 @@ on = Router()
 
 
 @on.message(Command("start"))
-async def start_bot(bot: Bot, message: Message):
-    choose_mode = InlineKeyboardMarkup(
+@on.callback_query(F.data == "start_menu")
+async def start_bot(obj: Message | CallbackQuery, bot: Bot):
+    kb = InlineKeyboardMarkup(
         inline_keyboard=[
             [
                 InlineKeyboardButton(
@@ -31,9 +34,18 @@ async def start_bot(bot: Bot, message: Message):
         ]
     )
 
-    await bot.send_message(
-        chat_id=message.from_user.id,
-        text="Выбери режим задания",
-        reply_markup=choose_mode.as_markup(),
-    )
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.id)
+    text = "Выбери режим задания"
+    if isinstance(obj, Message):
+        await bot.send_message(
+            chat_id=obj.from_user.id,
+            text=text,
+            reply_markup=kb,
+        )
+        await bot.delete_message(chat_id=obj.from_user.id, message_id=obj.message_id)
+    else:
+        await bot.edit_message_text(
+            chat_id=obj.from_user.id,
+            message_id=obj.message.message_id,
+            text=text,
+            reply_markup=kb,
+        )
