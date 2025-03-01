@@ -1,6 +1,12 @@
+from pathlib import Path
+
 from utils.config_parser import Settings
 
 settings = Settings()
+
+APP_FOLDER = Path(__file__).resolve().parent.parent
+CACHE_FOLDER = APP_FOLDER / "cache"
+CACHE_FOLDER.mkdir(parents=True, exist_ok=True)
 
 english_system_prompt = """
 Ты — Emily, дружелюбный преподаватель-носитель английского языка на образовательной платформе.

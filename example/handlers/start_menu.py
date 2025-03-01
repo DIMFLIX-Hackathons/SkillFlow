@@ -2,6 +2,7 @@ from aiogram import Bot
 from aiogram import F
 from aiogram import Router
 from aiogram.filters import Command
+from aiogram.fsm.context import FSMContext
 from aiogram.types import CallbackQuery
 from aiogram.types import InlineKeyboardButton
 from aiogram.types import InlineKeyboardMarkup
@@ -12,7 +13,9 @@ on = Router()
 
 @on.message(Command("start"))
 @on.callback_query(F.data == "start_menu")
-async def start_bot(obj: Message | CallbackQuery, bot: Bot):
+async def start_bot(obj: Message | CallbackQuery, bot: Bot, state: FSMContext):
+    await state.clear()
+
     kb = InlineKeyboardMarkup(
         inline_keyboard=[
             [
