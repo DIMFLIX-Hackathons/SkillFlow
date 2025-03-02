@@ -2,6 +2,7 @@ import json
 from typing import Dict
 from typing import Set
 
+import torch
 from loguru import logger
 from transformers import pipeline
 from utils.ai_assistant import AIAssistant
@@ -11,10 +12,11 @@ class PronunciationPracticeManager:
     def __init__(self):
         self.levels = ["A1", "A2", "B1", "B2", "C1", "C2"]
         self.max_history = 20
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.g2p_processor = pipeline(
             "automatic-speech-recognition",
             model="dg96/whisper-finetuning-phoneme-transcription-g2p-large-dataset-space-seperated-phonemes",
-            device="cuda:0",
+            device=self.device,
         )
         self.ai_assistant = AIAssistant(
             system_prompt="Generate unique English phrases for pronunciation practice with ARPABET phonemes."
