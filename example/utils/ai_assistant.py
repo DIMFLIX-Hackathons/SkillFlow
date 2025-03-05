@@ -1,4 +1,3 @@
-
 import g4f
 
 
@@ -13,7 +12,12 @@ class AIAssistant:
         self, user_message: str, history: list[dict], model: str = "deepseek-chat"
     ) -> tuple[str, list[dict]]:
         updated_history = self.system_prompt + history.copy()
-        updated_history.append({"role": "user", "content": user_message})
+        updated_history.append(
+            {
+                "role": "user",
+                "content": user_message + "give me an answer without a single emoji",
+            }
+        )
 
         try:
             response = await g4f.ChatCompletion.create_async(

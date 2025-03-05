@@ -17,11 +17,15 @@ license-files = ["LICEN[CS]E*"]
 dependencies = [
     "aiogram>=3.18.0",
     "g4f>=0.4.7.7",
+    "google-api-python-client>=2.162.0",
+    "gtts>=2.5.4",
     "loguru>=0.7.3",
     "openai-whisper>=20240930",
     "pydantic>=2.10.6",
     "pydantic-settings>=2.8.1",
+    "pydub>=0.25.1",
     "speechbrain>=1.0.2",
+    "speechrecognition>=3.14.1",
     "transformers>=4.49.0",
     "uvloop>=0.21.0",
 ]
